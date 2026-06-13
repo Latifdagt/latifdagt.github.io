@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Animation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+        <main id="landing" class="container d-flex justify-content-center align-items-center" style="min-height:70vh;">
+                <div class="text-center">
+                        <button id="animateBtn" class="btn btn-success btn-lg btn-obvious">Click for a suprise!</button>
+                </div>
+        </main>
+
+        <!-- Birthday page (hidden until activated) -->
+        <section id="birthdayPage" class="d-none">
+            <div class="container text-center py-5">
+                <h2 class="display-4 mb-3">Happy Birthday Olivia(The real catgirl)!</h2>
+                <div class="ratio ratio-16x9 mb-4">
+                    <iframe id="birthdayVideo" src="" title="Olivia's Surprise Video" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                <div id="messageDisplay" class="mb-4 fs-4"></div>
+
+                <div>
+                    <a id="backBtn" class="btn btn-outline-dark me-2">Back</a>
+                    
+                    <a id="revealBtn" class="btn btn-warning">Reveal gift!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reveal page: shows a picture after closing the video -->
+        <section id="revealPage" class="d-none">
+            <div class="container text-center py-5">
+                <h2 class="display-4 mb-3">Happy birthday Olivia, Enjoy your gift!</h2>
+                <p class="lead mb-4">Hope you have a lovely day!</p>
+                <img id="surpriseImage" src="https://images.unsplash.com/photo-1505577058444-a3dab0e8b6b5?auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded shadow-lg" alt="Surprise">
+                <div class="mt-4">
+                    <button id="replayBtn" class="btn btn-outline-secondary">Back to Start</button>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+:root{
+    --bg: #ffffff;
+    --fg: #222;
+    --accent: #28a745;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    background: var(--bg);
+    color: var(--fg);
+    transition: background 500ms ease, color 500ms ease;
+}
+
+#animateBtn {
+    padding: 12px 26px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Enhanced button appearance */
+.btn-obvious {
+    padding: 14px 28px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    border: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-obvious:active { transform: translateY(2px); }
+.btn-obvious:hover { box-shadow: 0 14px 40px rgba(0,0,0,0.30); }
+
+/* Birthday theme styles */
+#birthdayPage {
+    min-height: 80vh;
+    display: block;
+    background: linear-gradient(135deg,#ffefba,#ffffff 40%);
+    color: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-110%);
+    transition: transform 600ms cubic-bezier(.2,.9,.2,1);
+    z-index: 1050;
+    overflow: auto;
+    padding-top: 70px;
+}
+
+#birthdayPage h2 { font-weight: 800; color: #2b2b2b; }
+#messageDisplay { min-height: 3rem; }
+
+/* Dark, celebratory theme when active */
+.celebrate body, .celebrate { }
+.celebrate #birthdayPage { background: radial-gradient(circle at 10% 10%, #ffefba, #ffc3a0 30%, #ff6b6b 100%); color: #fff; }
+.celebrate #backBtn { color: #fff; }
+
+/* When open, slide the page down from top */
+#birthdayPage.open { transform: translateY(0); }
+
+/* Prevent background scroll while birthday page open */
+body.no-scroll { overflow: hidden; }
+
+/* Reveal page slides up from bottom */
+#revealPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg,#fff8e1,#ffd6c2 40%);
+    padding-top: 70px;
+    z-index: 1060;
+    transform: translateY(110%);
+    transition: transform 600ms cubic-bezier(.2,.9,.2,1);
+    overflow: auto;
+}
+
+#revealPage.open { transform: translateY(0); }
+
+#surpriseImage { max-width: 80%; height: auto; }
